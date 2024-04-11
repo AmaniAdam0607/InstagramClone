@@ -1,12 +1,18 @@
 import React from "react";
-import Card from "./components/Card";
 import { SafeAreaView, StyleSheet, View } from 'react-native';
+import CardList from "./components/CardList";
 // import { Constants }from 'expo';
+
+const items = [  // dummy data for testing.
+  { id: 0, author: 'Bob Ross' },
+  { id: 1, author: 'Chuck Norris' },
+  ];
+  
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Card fullname={'Magreth Fransis'} linkText={"Comments"} onPressLinkText={() => {/** */}} image={{uri: "https://picsum.photos/600/600"}}/>
+      <CardList items={items}/>
     </SafeAreaView>
   );
 }

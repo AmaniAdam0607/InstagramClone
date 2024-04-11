@@ -5,5 +5,4 @@ export const fetchImages = async () => {
   return images;
 };
 
-export const getImageFromId = id =>
-  `https://unsplash.it/${600}/${600}?image=${id}`;
+export const getImageFromId = id => `https://picsum.photos/${600}/${600}?image=${id}`; //`https://unsplash.it/${600}/${600}?image=${id}`; 

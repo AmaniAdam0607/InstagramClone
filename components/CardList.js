@@ -3,7 +3,7 @@ import { FlatList } from 'react-native';
 import Card from './Card';
 import { getImageFromId } from '../utils/api';
 
-const keyExtractor = ({ id }) => isFinite.toString();
+const keyExtractor = ({ id }) => id.toString();
 
 const renderItem = ({ item: { id, author } }) => (
     <Card fullname={author} image={{uri: getImageFromId(id)}}/>

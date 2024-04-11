@@ -1,28 +1,24 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, View } from 'react-native';
-import CardList from "./components/CardList";
-// import { Constants }from 'expo';
-
-const items = [  // dummy data for testing.
-  { id: 0, author: 'Bob Ross' },
-  { id: 1, author: 'Chuck Norris' },
-  ];
-  
+import { SafeAreaView, StyleSheet, View, Platform } from 'react-native';
+import Constants from 'expo-constants';
+import Feed from "./screens/Feed";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <CardList items={items}/>
+      <Feed style={styles.feed}/>
     </SafeAreaView>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  feed: {
+    flex: 1,
+    marginTop: Platform.OS === 'android' ? Constants.statusBarHeight : 0,
+  }
 });
 
 

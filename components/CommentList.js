@@ -3,10 +3,16 @@ import { View, ScrollView, StyleSheet, Text } from 'react-native';
 
 export default CommentList = ({ items }) => {
 
+
     const renderItem = ( item, index ) => {
-        <View key={index} style={styles.comment}>
+
+        const _comments = []
+
+        _comments.push(<View key={index} style={styles.comment}>
             <Text>{item}</Text>
-        </View>
+        </View>)
+
+        return _comments;
     }
 
     return (

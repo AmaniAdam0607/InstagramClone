@@ -4,7 +4,7 @@ import { ActivityIndicator, Text, SafeAreaView } from 'react-native';
 import { fetchImages } from '../utils/api';
 import CardList from '../components/CardList';
 
-export default Feed = ({ style }) => {
+export default Feed = ({ style, commentsForItem, onPressComments }) => {
     const [ loading, setLoading ] = useState(true);
     const [ error, setError ] = useState(false);
     const [ items, setItems ] = useState([]);
@@ -35,7 +35,7 @@ export default Feed = ({ style }) => {
 
     return (
         <SafeAreaView style={style}>
-            < CardList items={items} />
+            < CardList items={items} onPressComments={onPressComments} commentsForItem={commentsForItem} />
         </SafeAreaView>
     )
 };
